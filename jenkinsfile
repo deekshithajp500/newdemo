@@ -10,6 +10,7 @@ pipeline {
     stage("verify tooling") {
       steps {
         sh '''
+          sudo usermod -a -G docker jenkins
           docker version
           docker info
           docker compose version 
