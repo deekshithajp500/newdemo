@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo 'Hello World'
+                sh "python3 tictactoe.py"
+                echo 'Gaming challenge'
             }
         }
     }
