@@ -12,6 +12,7 @@ pipeline {
                dockerImage = docker.build registry
               }
               }
+              }
         stage('Example') {
             steps {
                 sh "python3 tictactoe.py"
