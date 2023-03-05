@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
          dockerImage=''
+         registry = 'deekshithajp/image'
     }
     
       stages {
