@@ -11,6 +11,12 @@ pipeline {
              checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/deekshithajp500/newdemo.git']]])
           }
         }
+          stage('Example') {
+            steps {
+                sh "python3 tictactoe.py"
+                echo 'Gaming challenge'
+            }
+            }
         stage(' Build Docker image') {
           steps {
               script {
@@ -18,11 +24,6 @@ pipeline {
               }
               }
               }
-        stage('Example') {
-            steps {
-                sh "python3 tictactoe.py"
-                echo 'Gaming challenge'
-            }
-            }
+      
             }
             }
