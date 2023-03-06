@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    environment {
-         dockerImage=''
-         registry = 'deekshithajp/newdemo'
-    }
     
       stages {
         stage('Checkout') {
