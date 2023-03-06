@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
           steps {
              sh "python3 tictactoe.py"
-             checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/deekshithajp500/newdemo.git']]])
+             echo "tictactoe program"
             }
         }
           
